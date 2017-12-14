@@ -1,0 +1,12 @@
+<h1>Books list</h1>
+  <% @books.each do |book| %>
+  <h2><%= book.title %></h2>
+  <h4>By: <%= book.author %> </h4>
+  <h4>Status:
+   <% if book.already_read %>
+    Read
+    <% else %>
+    Unread
+  <% end  %>
+  </h4>
+<% end %>
